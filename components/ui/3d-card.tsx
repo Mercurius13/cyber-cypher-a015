@@ -7,7 +7,7 @@ import React, {
   useRef,
   useEffect,
 } from "react";
-import { cn } from "@/lib/utils"; // Ensure your utility function is imported
+import cn from "../../utils/cn"; // Ensure your utility function is imported
 
 const MouseEnterContext = createContext<
   [boolean, React.Dispatch<React.SetStateAction<boolean>>] | undefined

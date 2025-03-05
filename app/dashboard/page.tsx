@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FloatingDock } from "../../components/ui/floating-dock";
 
 // Import your components
-//import Chat from "../../components/Chat";
+import Chat from "../../components/Chat";
 import Profile from "../../components/Profile";
 import VideoCall from "../../components/VideoCall";
 
@@ -19,8 +19,8 @@ export default function Dashboard() {
 
   const renderComponent = () => {
     switch (activeComponent) {
-      case "profile":
-        return <Profile />;
+      case "chat":
+        return <Chat />;
       case "videocall":
         return <VideoCall />;
       default:
@@ -29,10 +29,10 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-100 dark:bg-neutral-900">
+    <div className="flex flex-col items-center min-h-screen pb-16 bg-gradient-to-br from-black via-orange-700 to-black">
       <main className="flex-1 w-full max-w-4xl p-6 text-center">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Dashboard</h1>
-        <p className="mt-2 text-gray-600 dark:text-gray-400">
+        <h1 className="text-3xl font-bold text-gray-500 dark:text-white">Dashboard</h1>
+        <p className="mt-2 text-gray-500 dark:text-gray-400">
           Welcome to your dashboard! Use the navigation below.
         </p>
 
